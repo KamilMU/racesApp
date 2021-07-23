@@ -40,7 +40,7 @@ function LoginForm({ history }) {
         <Form className="login-form">
           <p>Simple Flight Check</p>
           <FormElement
-            labelName="Name"
+            labelName="Логин: "
             type="text"
             value={values.name}
             handleChange={handleChange}
@@ -48,7 +48,7 @@ function LoginForm({ history }) {
             errors={errors}
           />
           <FormElement
-            labelName="Password"
+            labelName="Пароль: "
             type="password"
             value={values.password}
             handleChange={handleChange}
@@ -56,7 +56,7 @@ function LoginForm({ history }) {
             errors={errors}
           />
           <button type="submit" disabled={isSubmitting}>
-            Log in
+            Войти
           </button>
         </Form>
       )}

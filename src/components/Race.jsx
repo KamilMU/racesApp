@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addToFavourites, removeFavouriteRace } from '../redux/actions';
+import { substrDate } from '../utils';
 
 export default function Race({ race }) {
   const [clicked, setClicked] = useState(false);
@@ -13,9 +14,11 @@ export default function Race({ race }) {
           <img src={require('../images/plane.png')} alt="" />
         </div>
         <div className="list__main-content">
-          <div className="list__race">Moscow (SVO) <img src={require('../images/arrow.png')} alt="" /> New York City (JFK)</div>
+          <div className="list__race">
+            Moscow (SVO) <img src={require('../images/arrow.png')} alt="" /> New York City (JFK)
+          </div>
           <div className="list__date">
-            {race.QuoteDateTime.substr(0, 10)} - {race.QuoteDateTime.substr(11, 14)}
+            {substrDate(race.QuoteDateTime)}
           </div>
           <div className="list__company">Aeroflot</div>
         </div>
