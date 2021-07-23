@@ -6,7 +6,10 @@ import { auth } from "../auth/auth.js";
 import FormElement from "./FormElement.jsx";
 
 const loginSchema = yup.object().shape({
-  name: yup.string().required(),
+  email: yup
+  .string()
+  .email("Must be a valid email adress")
+  .required("No email provided."),
   password: yup
     .string()
     .required("No password provided.")
@@ -16,14 +19,14 @@ const loginSchema = yup.object().shape({
 
 function LoginForm({ history }) {
   const [formValues] = useState({
-    name: "",
+    email: "",
     password: ""
   });
 
   return (
     <Formik
       initialValues={{
-        name: formValues.name,
+        email: formValues.email,
         secondName: formValues.secondName,
         password: formValues.password
       }}
@@ -42,9 +45,9 @@ function LoginForm({ history }) {
           <FormElement
             labelName="Логин: "
             type="text"
-            value={values.name}
+            value={values.email}
             handleChange={handleChange}
-            fieldName="name"
+            fieldName="email"
             errors={errors}
           />
           <FormElement

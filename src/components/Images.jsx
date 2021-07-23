@@ -1,15 +1,11 @@
-import React from 'react'
+import React from 'react';
 import Carousel from 'react-multi-carousel';
+import { useSelector } from 'react-redux';
 import { responsive } from '../utils';
 
-const images = [
-  require('../images/1.png'),
-  require('../images/2.png'),
-  require('../images/3.png'),
-  require('../images/1.png'),
-]
-
 export default function Images() {
+  const images = useSelector((state) => state.images);
+
   return (
     <Carousel
       ssr

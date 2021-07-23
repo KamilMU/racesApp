@@ -2,7 +2,13 @@ import { GET_RACES_SUCCESS, FAVOURITE_RACES, REMOVE_FAVOURITE_RACE, SHOW_RACES_B
 
 const initialState = {
   races: [],
-  favourites: []
+  favourites: [],
+  images: [
+    require('../../images/1.png'),
+    require('../../images/2.png'),
+    require('../../images/3.png'),
+    require('../../images/1.png')
+  ]
 }
 
 export const reducer = (state = initialState, action) => {

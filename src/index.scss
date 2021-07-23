@@ -7,12 +7,14 @@ ul {
   margin: 0;
   padding: 0;
   display: flex;
-  width: 100%;
-  overflow-x: hidden;
 
   img {
     width: 164px !important;
     height: 149px !important;
+  }
+
+  li {
+    width: 164px !important;
   }
 
   li + li {
@@ -34,7 +36,11 @@ body {
     position: relative;
     background-color: rgba(255, 255, 255, 0.664);
 
-    &::before {
+    @media (max-width: 410px) {
+      padding: 0 20px;
+    }
+
+    &::after {
       content: "";
       position: fixed;
       left: 0;
@@ -142,6 +148,10 @@ body {
     padding-bottom: 60px;
     position: relative;
 
+    @media (max-width: 688px) {
+      padding: 60px 20px;
+    }
+
     &__header {
       display:flex;
       align-items: center;
@@ -157,6 +167,10 @@ body {
         line-height: 37px;
         color: #424242;
         font-weight: bold;
+
+        @media (max-width: 688px) {
+          font-size: 18px;
+        }
 
         span {
           color: #A7A7A7;
@@ -206,6 +220,10 @@ body {
       width: 100%;
       margin: 0 auto;
       position: relative;
+
+      @media (max-width: 688px) {
+        padding: 18px;
+      }
     }
 
     &__calendar-icon {
