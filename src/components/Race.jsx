@@ -35,7 +35,6 @@ export default function Race({ race }) {
               } else {
                 dispatch(removeFavouriteRace(race))
               }
-              console.log(race);
             }}
           />
         </div>

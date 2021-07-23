@@ -22,9 +22,16 @@ export default function Races({ history }) {
       <div className="races__container">
         <RacesHeader />
         <Images />
-        <p className="races__fav-count">Добавлено в Избранное: <span>{favourites?.length}</span> рейсов</p>
+        <p className="races__fav-count">
+          Добавлено в Избранное: <span>{favourites?.length}</span> рейсов
+        </p>
         <div className="races__main">
-          {races.length ? <div className="list">{races.map((race, index) => (<Race key={index} race={race} />))}</div> : (
+          {races.length ? (
+            <div className="list">
+              {races.map((race, index) => (
+                <Race key={index} race={race} />
+              ))}
+            </div>) : (
             <div className="loader">
               <Loader
                 type="Oval"

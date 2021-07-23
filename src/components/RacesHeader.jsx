@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Calendar from 'react-calendar';
 import { showRacesByDate } from '../redux/actions';
-import { useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux';
 
 export default function RacesHeader() {
   const [calendarClicked, setCalendarClicked] = useState(false);
   const [value, onChange] = useState("");
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(showRacesByDate(new Date(value).toLocaleDateString()));

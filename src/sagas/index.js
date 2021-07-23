@@ -5,7 +5,6 @@ import * as api from '../api';
 function* fetchRaces() {
   try {
     const result = yield call(api.getRaces);
-    console.log(result.data, 'result')
     yield put(getRacesSuccess(result.data.Quotes));
   } catch (error) {
     console.error(error);

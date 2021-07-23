@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const GET_RACES_REQUEST = "GET_RACES_REQUEST";
 export const GET_RACES_SUCCESS = "GET_RACES_SUCCESS";
 export const FAVOURITE_RACES = "FAVOURITE_RACES";

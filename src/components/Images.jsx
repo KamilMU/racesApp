@@ -3,10 +3,10 @@ import Carousel from 'react-multi-carousel';
 import { responsive } from '../utils';
 
 const images = [
-  require('../images/1.jpg'),
-  require('../images/2.jpg'),
-  require('../images/3.jpg'),
-  require('../images/1.jpg'),
+  require('../images/1.png'),
+  require('../images/2.png'),
+  require('../images/3.png'),
+  require('../images/1.png'),
 ]
 
 export default function Images() {

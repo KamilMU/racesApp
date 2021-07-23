@@ -10,13 +10,9 @@ ul {
   width: 100%;
   overflow-x: hidden;
 
-  li {
-    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-
-    img {
-      border-radius: 12px;
-    }
+  img {
+    width: 164px !important;
+    height: 149px !important;
   }
 
   li + li {
@@ -27,7 +23,7 @@ ul {
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: rgb(218, 218, 218);
+  background-color: rgba(255, 255, 255, 0.664);
 
   .app {
     display:flex;
@@ -35,7 +31,6 @@ body {
     align-items: center;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
     position: relative;
     background-color: rgba(255, 255, 255, 0.664);
 
@@ -142,13 +137,10 @@ body {
 
   // RACES
   .races {
-    height: 100vh;
     width: 100%;
     padding-top: 60px;
     padding-bottom: 60px;
-    overflow: hidden;
     position: relative;
-    background-color: rgba(255, 255, 255, 0.664);
 
     &__header {
       display:flex;
@@ -164,10 +156,12 @@ body {
         font-size: 32px;
         line-height: 37px;
         color: #424242;
+        font-weight: bold;
 
         span {
           color: #A7A7A7;
           margin: 0 10px;
+          font-weight: normal;
         }
       }
     }
@@ -184,11 +178,6 @@ body {
 
      .carousel-item {
       width: 100%;
-
-      img {
-        width: 164px;
-        height: 149px;
-      }
      }
 
     .log-out {
@@ -209,7 +198,7 @@ body {
     }
 
     &__container {
-      padding: 22px 12px;
+      padding: 60px 40px;
       background-color: white; 
       box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
@@ -235,8 +224,8 @@ body {
 
     &__pop-up-calendar {
       position: absolute;
-      top: 0;
-      right: 40px;
+      top: -20px;
+      right: 80px;
       width: 320px;
       z-index: 22;
       background: white;
@@ -246,11 +235,20 @@ body {
 
       button {
         border: none;
-        background-color: rgb(241, 241, 241);
-        border: 1px solid rgb(182, 182, 182);
+        background-color: rgb(235, 235, 235);
         cursor: pointer;
-        padding: 14px;
+        padding: 5px;
         margin-bottom: 5px;
+        margin-right: 5px;
+
+        &:hover {
+          background-color: #2471ca;
+          color: white;
+        }
+
+        span {
+          font-size: 14px;
+        }
       }
     }
 
@@ -272,7 +270,7 @@ body {
     .list {
       overflow-y: scroll;
       height: 380px;
-      padding: 0 10px;
+      padding: 0 6px;
 
       &::-webkit-scrollbar {
         width: 2px;               /* width of the entire scrollbar */
@@ -292,7 +290,7 @@ body {
         display:flex;
         justify-content: space-between;
         align-items: center;
-        padding: 16px;
+        padding: 4px;
         border-bottom: 1px solid rgba(135, 135, 135, 0.2);
 
         .fav {
@@ -308,10 +306,6 @@ body {
 
       &__left {
         display:flex;
-      }
-
-      &__right {
-
       }
 
       &__img {
