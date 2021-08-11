@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 export const getRaces = async (startDate, endDate = "") => {
-  console.log(startDate, 'startDate')
   const options = {
     method: 'GET',
     url: `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/RU/RUB/ru-RU/SVO/JFK/${startDate}`,

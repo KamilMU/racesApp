@@ -5,7 +5,6 @@ import * as api from '../api';
 function* fetchRaces({ startDate, endDate }) {
   try {
     const result = yield call(api.getRaces, startDate, endDate);
-    console.log(result, 'resersrereee')
     yield put(getRacesSuccess(result.Quotes));
   } catch (error) {
     console.error(error);
