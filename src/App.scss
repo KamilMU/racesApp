@@ -1,0 +1,29 @@
+.app {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.664);
+
+  @media (max-width: 410px) {
+    padding: 0 20px;
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background: url(./images/bg.jpg);
+    background-size: cover;  
+    background-repeat: no-repeat;
+    background-position: center center;  
+    display: block;
+    filter: blur(5px);
+  }
+}

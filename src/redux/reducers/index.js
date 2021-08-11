@@ -34,9 +34,7 @@ export const reducer = (state = initialState, action) => {
     case SHOW_RACES_BY_DATE:
       return {
         ...state,
-        races: state.races.filter(fav => {
-          return new Date(fav.QuoteDateTime).toLocaleDateString() === action.date
-        })
+        races: action.payload.items
       }
 
     default:

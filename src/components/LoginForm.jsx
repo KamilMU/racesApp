@@ -4,6 +4,7 @@ import { withRouter } from "react-router-dom";
 import * as yup from "yup";
 import { auth } from "../auth/auth.js";
 import FormElement from "./FormElement.jsx";
+import './LoginForm.scss';
 
 const loginSchema = yup.object().shape({
   email: yup

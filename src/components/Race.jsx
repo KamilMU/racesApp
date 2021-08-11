@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addToFavourites, removeFavouriteRace } from '../redux/actions';
-import { substrDate } from '../utils';
+import moment from 'moment';
 
 export default function Race({ race }) {
   const [clicked, setClicked] = useState(false);
@@ -18,7 +18,7 @@ export default function Race({ race }) {
             Moscow (SVO) <img src={require('../images/arrow.png')} alt="" /> New York City (JFK)
           </div>
           <div className="list__date">
-            {substrDate(race.QuoteDateTime)}
+            {moment(race.OutboundLeg.DepartureDate).format('YYYY-MM-DD')}
           </div>
           <div className="list__company">Aeroflot</div>
         </div>

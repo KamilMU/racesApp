@@ -8,10 +8,8 @@ export default function Images() {
 
   return (
     <Carousel
-      ssr
       containerClass="carousel-container"
       itemClass="carousel-item"
-      partialVisbile
       direction="horizontal"
       itemClass="image-item"
       responsive={responsive}

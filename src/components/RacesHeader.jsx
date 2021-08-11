@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from 'react'
-import Calendar from 'react-calendar';
-import { showRacesByDate } from '../redux/actions';
-import { useDispatch } from 'react-redux';
+import moment from 'moment';
+import React, { useState } from 'react'
+import { DateRangePicker } from 'react-date-range';
 
-export default function RacesHeader() {
+export default function RacesHeader({ selectionRange, onChange }) {
   const [calendarClicked, setCalendarClicked] = useState(false);
-  const [value, onChange] = useState("");
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(showRacesByDate(new Date(value).toLocaleDateString()));
-  }, [value])
 
   return (
     <div className="races__header">
       <span>Вылеты <span>&#62;</span> SVO - JFK</span>
       <div className="races__calendar-icon">
-        <span>{value ? value?.toLocaleDateString() : ''}</span>
+        <span>{selectionRange.startDate ? selectionRange.startDate?.toLocaleDateString() : ''}</span>
         <img
           src={require('../images/calendar.png')}
           alt=""
           onClick={() => setCalendarClicked(!calendarClicked)}
         />
       </div>
-      <div className={calendarClicked ? "races__pop-up-calendar" : "hide"}>
-        <Calendar
-          onChange={onChange}
-          value={value}
-        />
+      <div className={calendarClicked ? "races__pop-up-date-picker" : "hide"}>
+        <div className="date-picker">
+          <DateRangePicker
+            onChange={onChange}
+            ranges={selectionRange}
+            minDate={new Date()}
+            showSelectionPreview={true}
+            moveRangeOnFirstSelection={false}
+            direction="horizontal"
+          />
+          <button className="date-picker-close-btn" onClick={() => setCalendarClicked(false)}>Close</button>
+        </div>
       </div>
     </div>
   )

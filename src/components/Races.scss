@@ -1,0 +1,241 @@
+// RACES
+.races {
+  width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+
+  @media (max-width: 688px) {
+    padding: 60px 20px;
+  }
+
+  &__header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 24px;
+
+    span {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 37px;
+      color: #424242;
+      font-weight: bold;
+
+      @media (max-width: 688px) {
+        font-size: 18px;
+      }
+
+      span {
+        color: #A7A7A7;
+        margin: 0 10px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .carousel-container {
+    width: 100%;
+    display:flex;
+    overflow-x: hidden;
+
+    button {
+      display: none;
+    }
+    }
+
+    .carousel-item {
+    width: 100%;
+    }
+
+  .log-out {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    cursor: pointer;
+
+    span {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 22px;
+      color: #1157A7;
+      margin-right: 18px;
+    }
+  }
+
+  &__container {
+    padding: 60px 40px;
+    background-color: white; 
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @media (max-width: 688px) {
+      padding: 18px;
+    }
+  }
+
+  &__calendar-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 22px;
+      color: #1157A7;
+    }
+  }
+
+  &__pop-up-date-picker {
+    position: absolute;
+    top: -20px;
+    right: 50px;
+    z-index: 22;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    border-radius: 20px;
+
+    .date-picker {
+      position: relative;
+      padding: 10px;
+
+      &-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: transparent;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        outline: 0;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 4px 8px;
+      }
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  .loader {
+    text-align: center;
+  }
+
+  &__fav-count {
+    span {
+      color: #1157A7;
+      font-weight: bold;
+    }
+  }
+
+  .list {
+    overflow-y: auto;
+    height: 380px;
+    padding: 0 6px;
+
+    &::-webkit-scrollbar {
+      width: 2px;               /* width of the entire scrollbar */
+      border-radius: 2px;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #E7E7E7;       /* color of the tracking area */
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: #1157A7;
+      border-radius: 2px;
+    }
+
+    &__item {
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px;
+      border-bottom: 1px solid rgba(135, 135, 135, 0.2);
+
+      .fav {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 22px;
+
+        img {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__left {
+      display:flex;
+    }
+
+    &__img {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      width: 64px;
+      height: 64px;
+      border-radius:50%;
+      background: rgba(0, 119, 255, 0.05);
+      margin-right: 24px;
+    }
+
+    &__main-content {
+      color: #424242;
+    }
+
+    &__race {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 22px;
+    }
+
+    &__date {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: #878787;
+      margin-bottom: 2px;
+    }
+
+    &__company {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: #878787;
+    }
+
+    &__price {
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 22px;
+      color: #878787;
+
+      span {
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 22px;
+        color: #424242;
+      }
+    }
+  }
+}

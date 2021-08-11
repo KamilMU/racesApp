@@ -5,8 +5,10 @@ export const FIND_RACES = "FIND_RACES";
 export const REMOVE_FAVOURITE_RACE = "REMOVE_FAVOURITE_RACE";
 export const SHOW_RACES_BY_DATE = "SHOW_RACES_BY_DATE";
 
-export const getRacesRequest = () => ({
-  type: GET_RACES_REQUEST
+export const getRacesRequest = (startDate, endDate) => ({
+  type: GET_RACES_REQUEST,
+  startDate,
+  endDate
 });
 
 export const getRacesSuccess = items => ({

@@ -17,7 +17,3 @@ export const responsive = {
     items: 1
   }
 };
-
-export function substrDate(date) {
-  return `${date.substr(0, 10)} - ${date.substr(11, 14)}`;
-}
