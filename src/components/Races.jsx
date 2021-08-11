@@ -4,7 +4,7 @@ import { getRacesRequest } from '../redux/actions';
 import Race from './Race.jsx';
 import RacesHeader from './RacesHeader.jsx';
 import LogOutButton from './LogOutButton.jsx';
-import Images from './Images.jsx';
+import CarouselOfImages from './CarouselOfImages.jsx';
 import Loader from 'react-loader-spinner';
 import moment from 'moment';
 import './Races.scss'
@@ -18,9 +18,11 @@ export default function Races({ history }) {
   const races = useSelector((state) => state.races)
   const favourites = useSelector((state) => state.favourites)
   const dispatch = useDispatch()
-
+  
   useEffect(() => {
-    dispatch(getRacesRequest(moment(selectionRange[0]['startDate']).format("YYYY-MM-DD"), moment(selectionRange[0]['endDate']).format("YYYY-MM-DD")))
+    const startDate = moment(selectionRange[0]['startDate']).format("YYYY-MM-DD")
+    const endDate = moment(selectionRange[0]['endDate']).format("YYYY-MM-DD")
+    dispatch(getRacesRequest(startDate, endDate))
   }, [selectionRange])
 
   const handleOnChange = ranges => {
@@ -33,7 +35,7 @@ export default function Races({ history }) {
       <LogOutButton history={history} />
       <div className="races__container">
         <RacesHeader selectionRange={selectionRange} onChange={handleOnChange} />
-        <Images />
+        <CarouselOfImages />
         <p className="races__fav-count">
           Добавлено в Избранное: <span>{favourites?.length}</span> рейсов
         </p>

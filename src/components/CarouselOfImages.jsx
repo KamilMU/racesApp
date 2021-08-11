@@ -2,8 +2,9 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import { useSelector } from 'react-redux';
 import { responsive } from '../utils';
+import './CarouselOfImages.scss';
 
-export default function Images() {
+export default function CarouselOfImages() {
   const images = useSelector((state) => state.images);
 
   return (

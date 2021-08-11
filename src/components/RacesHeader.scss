@@ -1,0 +1,78 @@
+.header {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+
+  span {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    color: #424242;
+    font-weight: bold;
+
+    @media (max-width: 688px) {
+      font-size: 18px;
+    }
+
+    span {
+      color: #A7A7A7;
+      margin: 0 10px;
+      font-weight: normal;
+    }
+  }
+
+  &__date-picker-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    span {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 22px;
+      color: #1157A7;
+      margin-right: 5px;
+    }
+  }
+
+  &__pop-up-date-picker {
+    position: absolute;
+    top: -20px;
+    right: 50px;
+    z-index: 22;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: white;
+    border-radius: 20px;
+
+    .date-picker {
+      position: relative;
+      padding: 10px;
+
+      &-close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: white;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        outline: 0;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 4px 8px;
+      }
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}

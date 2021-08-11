@@ -1,5 +1,6 @@
 import React from 'react'
 import { auth } from '../auth/auth';
+import './LogOutButton.scss';
 
 export default function LogOutButton({ history }) {
   return (
